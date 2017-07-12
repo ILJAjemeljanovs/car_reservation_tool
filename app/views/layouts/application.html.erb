@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Car Reservation Managment Tool</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render "layouts/sidemenu" %>
+    <div class="row"> 
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <%= flash_messages %>
+        <%= yield %>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+    <div class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <p class="navbar-text pull-left">© 07/12/2017 - Site built by Ilja Jemeljanovs in ~12 hours. +371 221 601 96 / ilja.jemeljanovs@inbox.lv</p>
+      </div>
+    </div>
+  </body>
+</html>
