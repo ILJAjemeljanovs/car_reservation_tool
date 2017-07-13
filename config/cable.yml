@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: redis://redistogo:e60d577b790b65a8adf8fbd20d8a5b47@crestfish.redistogo.com:10934/
   channel_prefix: cars_production
