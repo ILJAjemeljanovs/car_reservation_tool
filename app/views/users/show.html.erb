@@ -1,9 +1,17 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
 </p>
+<table class='table table-bordered table-hover'>
+  <% @user.reservations.order(:start_date).each do |r| %>
+    <tr id=<%= "reservation_#{r.id}" %> >
+      <td>Car number: <%= r.car.number %> </td>
+      <td><%= r.start_date.to_date.to_s %> </td>
+      <td><%= r.time_period %> </td>
+      <td><%= link_to 'Destroy', r, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

@@ -12,7 +12,7 @@ RSpec.describe "cars/edit", type: :view do
 
     assert_select "form[action=?][method=?]", car_path(@car), "post" do
 
-      assert_select "textarea[name=?]", "car[number]"
+      assert_select "input[name=?]", "car[number]"
     end
   end
 end

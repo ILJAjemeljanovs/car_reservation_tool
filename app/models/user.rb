@@ -1,3 +1,4 @@
 class User < ApplicationRecord
-  has_many :reservations
+  validates :name, presence: true
+  has_many :reservations, :dependent => :delete_all
 end

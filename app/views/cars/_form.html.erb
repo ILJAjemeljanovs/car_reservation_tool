@@ -13,10 +13,10 @@
 
   <div class="field">
     <%= form.label :number %>
-    <%= form.text_area :number, id: :car_number %>
+    <%= form.text_field :number, id: :car_number, class: "form-control"%>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Save", class: 'btn pull-right' %>
   </div>
 <% end %>

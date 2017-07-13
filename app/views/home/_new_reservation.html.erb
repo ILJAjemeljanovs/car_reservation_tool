@@ -11,6 +11,7 @@
         <dd><%= f.text_field :start_date, id: 'datetimepicker1', class: "form-control" %></dd>
         <dt>End date and time</dt>
         <dd><%= f.text_field :end_date, id: 'datetimepicker2', class: "form-control" %></dd>
+        <% f.text_field :date, value: @current_date %> 
         <%= f.submit "Create", class: 'btn pull-right' %> 
       <% end %>
     </dl>

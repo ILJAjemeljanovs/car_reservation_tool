@@ -12,7 +12,7 @@ class TimeRangeValidator < ActiveModel::Validator
         record.errors.add(:start_date, "can't be greater than end time")
       end
       if conflicting_records_count(record) > 0
-        record.errors.add(:time_range, "is conflicting with existing records")
+        record.errors.add(:time_range, "is conflicting with existing reservations")
       end
       if record.start_date.end_of_day < record.end_date
         record.errors.add(:time_range, "can't cover multiple days")

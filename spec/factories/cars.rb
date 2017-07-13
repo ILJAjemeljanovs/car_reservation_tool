@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :car do
-    number "MyText"
+    sequence(:number) {|n| "CAR#{n}"}
   end
 end

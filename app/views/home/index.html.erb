@@ -9,19 +9,17 @@
   <thead>
     <td><%= @current_date %></td>
     <% @cars.each do |car| %>
-      <th><%= car.number %></th>
+      <th><%= link_to car.number, car_path(car) %></th>
     <% end %>
   </thead>
-  <tbody>
+  <tbody id=<%= "#{@current_date.to_date.to_s}" %> >
     <% @users.each do |user| %>
-      <tr>
-        <th><%= user.name %></td>
+      <tr id=<%= "user_#{user.id}" %> >
+        <th><%= link_to user.name, user_path(user) %></td>
         <% @cars.each do |car| %>
-          <td>
+          <td id=<%= "car_#{car.id}" %> >
             <% @reservations.find_all{|res| res.car_id == car.id && res.user_id == user.id}.each do |reservation| %>
-              <%= reservation.start_date.strftime("%H.%M") %> 
-              - 
-              <%= reservation.end_date.strftime("%H.%M")%>;
+              <p id=<%= "reservation_#{reservation.id}" %> > <%= reservation.time_period %> </p>
             <% end %>
           </td>
         <% end %>

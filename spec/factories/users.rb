@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :user do
-    name "MyString"
+    sequence(:name) {|n| "UserName_#{n}"}
   end
 end

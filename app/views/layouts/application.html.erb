@@ -9,19 +9,31 @@
   </head>
 
   <body>
-    <%= render "layouts/sidemenu" %>
+    <%= render "layouts/menu" %>
     <div class="row"> 
       <div class="col-md-3"></div>
       <div class="col-md-6">
-        <%= flash_messages %>
+        <div id='flash-messages'>
+          <%= flash_messages %>
+        </div>
         <%= yield %>
       </div>
       <div class="col-md-3"></div>
     </div>
+    
+  </body>
+  <footer>
+    <!-- for footer not to overlap lowest of elements on page -->
+    <br><br><br><br><br><br><br><br>
     <div class="navbar navbar-default navbar-fixed-bottom">
       <div class="container">
-        <p class="navbar-text pull-left">© 07/12/2017 - Site built by Ilja Jemeljanovs in ~12 hours. +371 221 601 96 / ilja.jemeljanovs@inbox.lv</p>
+        <div class='row'>
+          <div class='col-md-3'></div>
+          <div class='col-md-6'>
+            <p class="navbar-text text-center">© 07/12/2017 - Site built by Ilja Jemeljanovs in ~12 hours. +371 221 601 96 ilja.jemeljanovs@inbox.lv</p>
+          </div>
+        </div>
       </div>
     </div>
-  </body>
+  </footer>
 </html>
